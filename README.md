@@ -22,8 +22,6 @@ import static java.lang.Math.PI;
         robot.frontRightMotor.setPower(v2);
         robot.backLeftMotor.setPower(v3);
         robot.backRightMotor.setPower(v4);
-    boolean G2leftBumper = gamepad2.left_bumper;
-        boolean G2rightBumper = gamepad2.right_bumper;
      float G1leftStickx= gamepad1.left_stick_x;
      float G1leftSticky= gamepad1.left_stick_y;
    if (-G1leftStickx>0)
