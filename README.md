@@ -10,9 +10,9 @@ import org.firstinspires.ftc.teamcode.BetaBotsHardware;
 import static java.lang.Math.PI;
 
 @TeleOp
-public class PracticeOpMode extends OpMode {
+public class Wheels extends OpMode {
     public ElapsedTime mRuntime = new ElapsedTime();
-    PracticeRobotHardware robot = new PracticeRobotHardware();
+   BetaBotsHardware robot = new BetaBotsHardware();
 
     public void init() {
         robot.init(hardwareMap);
