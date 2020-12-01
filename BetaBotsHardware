@@ -1,1 +1,37 @@
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+import com.qualcomm.robotcore.hardware.DcMotor;                    
+import com.qualcomm.robotcore.hardware.DcMotorController;
+import com.qualcomm.robotcore.hardware.Servo;
+import com.qualcomm.robotcore.util.ElapsedTime;
+import org.firstinspires.ftc.robotcore.external.matrices.OpenGLMatrix;
+import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
+import com.qualcomm.robotcore.hardware.HardwareMap;
+
+
+
+
+public class BetaBotsHardware
+{
+  
+public DcMotor backRightMotor, frontRightMotor,
+               backLeftMotor,  frontLeftMotor;
+
+ 
+    public boolean autonomous;   HardwareMap hwMap = null;
+    public BetaBotsHardware(){}
+    public void init(HardwareMap ahwMap)
+    {
+        hwMap = ahwMap;
+    frontLeftMotor = hwMap.dcMotor.get("frontLeftMotor");
+    frontRightMotor = hwMap.dcMotor.get("frontRightMotor");
+    backLeftMotor = hwMap.dcMotor.get("backLeftMotor");
+    backRightMotor = hwMap.dcMotor.get("backRightMotor");
+   
+    frontRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+    backRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+    
+    
+    
 
