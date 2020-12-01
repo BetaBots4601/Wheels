@@ -9,6 +9,14 @@ import com.qualcomm.robotcore.util.Hardware;
 import org.firstinspires.ftc.teamcode.BetaBotsHardware;
 import static java.lang.Math.PI;
 
+@TeleOp
+public class PracticeOpMode extends OpMode {
+    public ElapsedTime mRuntime = new ElapsedTime();
+    PracticeRobotHardware robot = new PracticeRobotHardware();
+
+    public void init() {
+        robot.init(hardwareMap);
+    }
 
     public void loop() {
         double r = Math.hypot(gamepad1.left_stick_x, gamepad1.left_stick_y);
